@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-sans text-gray-800 antialiased;
+}
+
+.animated-gradient {
+  @apply fixed inset-0;
+  animation: colorChange 60s infinite;
+}
+
+@keyframes colorChange {
+  0%, 100% { background-color: #FFD1DC; } /* Pastel Pink */
+  14.28% { background-color: #AEC6CF; } /* Light Blue */
+  28.57% { background-color: #E6E6FA; } /* Lilac */
+  42.85% { background-color: #98FB98; } /* Pastel Green */
+  57.14% { background-color: #FFDAB9; } /* Peach */
+  71.42% { background-color: #FFFACD; } /* Pastel Yellow */
+  85.71% { background-color: #FFE5B4; } /* Pastel Orange */
+}
+
+.glassmorphism {
+  @apply bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.vinyl-grooves {
+  background-image: repeating-radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.2) 0px,
+    rgba(255, 255, 255, 0.2) 1px,
+    transparent 1px,
+    transparent 100%
+  );
+  background-size: 20px 20px;
+}
+
